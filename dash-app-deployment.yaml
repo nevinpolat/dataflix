@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dash-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dash-app
+  template:
+    metadata:
+      labels:
+        app: dash-app
+    spec:
+      containers:
+      - name: dash-app
+        image: npolat/my-dash-app:latest
+        ports:
+        - containerPort: 8050
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dash-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: dash-app
+  ports:
+  - protocol: TCP
+    port: 8050
+    targetPort: 8050

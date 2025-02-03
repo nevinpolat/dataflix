@@ -1,0 +1,35 @@
+name: dataflix
+channels:
+  - conda-forge
+dependencies:
+  # Core Python
+  - python=3.11
+  - ipykernel=6.29.5
+
+  # Numerical & Scientific Libraries
+  - numpy=1.26.4
+  - pandas=2.2.3
+  - scipy=1.14.1
+  - scikit-learn=1.5.2
+  - seaborn=0.13.2
+  - matplotlib=3.9.2
+  - imbalanced-learn
+  - wordcloud
+
+  # NLP
+  - nltk=3.9.1
+
+  # Gradient Boosting Libraries (compiled)
+  - catboost=1.2.7
+  - lightgbm=4.5.0
+  - xgboost=1.7.4
+
+  # We include pip to install extra packages that might not be on conda-forge
+  - pip
+
+  # Install pure-Python packages via pip if not pinned or available on conda-forge
+  - pip:
+      - dash==2.18.1
+      - dash_bootstrap_components==1.6.0
+      - plotly==5.24.1
+      - joblib==1.4.2
