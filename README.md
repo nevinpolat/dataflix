@@ -926,12 +926,12 @@ dataflix/
 │   ├── ... .png files   
 │
 │── models/
-│   └── best_lgbm_pipeline_merged.pkl,                      │best_model_pipeline_optimized.pkl
+│   └── best_lgbm_pipeline_merged.pkl,     │best_model_pipeline_optimized.pkl
 │
 ├── model_all.ipynb
 │── EDA.ipynb
-│── train.pyEDA.ipynb
-│── app.pyEDA.ipynb
+│── train.py
+│── app.py
 │── environment.yml        # Conda environment file 
 ├── Dockerfile
 ├── dash-app-deployment.yaml
